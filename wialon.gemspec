@@ -1,0 +1,12 @@
+Gem::Specification.new do |s|
+  s.name        = 'wialon'
+  s.version     = '1.1.5'
+  s.date        = Time.now.strftime("%Y-%m-%d")
+  s.summary     = "Wialon gem wrapper for Remote API"
+  s.description = "Wialon gem wrapper for Remote API"
+  s.authors     = ["Golden M Software"]
+  s.email       = 'software@goldenmcorp.com'
+  s.files       = ["lib/wialon.rb"]
+  s.homepage    = 'http://rubygems.org/gems/wialon'
+  s.license     = 'MIT'
+end
