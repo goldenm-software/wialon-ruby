@@ -131,7 +131,7 @@ class Wialon
       if !response[:error].nil?
         return {
           status: 400,
-          reason: self.parse_errors(response[:error]),
+          reason: parse_errors(response[:error]),
           result: response
         }
       end
@@ -145,13 +145,13 @@ class Wialon
 
   def login(token)
     result = self.token_login({token: token})
-    if !result[:eid].nil?
-      self.sid = result[:eid]
+    if !result[:result][:eid].nil?
+      self.sid = result[:result][:eid]
     end
 
     begin
-      if !result[:user][:id].nil?
-        self.uid = result[:user][:id]
+      if !result[:result][:user][:id].nil?
+        self.uid = result[:result][:user][:id]
       end
     rescue Exception => e
       if self.debug
@@ -163,7 +163,7 @@ class Wialon
 
   def logout
     result = self.core_logout()
-    if result.empty? && result[:error] == 0
+    if result.empty? && result[:result][:error] == 0
       self.sid = ""
     end
     return result
