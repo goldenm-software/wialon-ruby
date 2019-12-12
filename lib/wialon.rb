@@ -162,7 +162,7 @@ class Wialon
   end
 
   def logout
-    result = self.core_logout()
+    result = self.core_logout({})
     if result.empty? && result[:result][:error] == 0
       self.sid = ""
     end

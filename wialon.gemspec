@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'wialon'
-  s.version     = '1.1.8'
+  s.version     = '1.2.0'
   s.date        = Time.now.strftime("%Y-%m-%d")
   s.summary     = "Wialon gem wrapper for Remote API"
   s.description = "Wialon gem wrapper for Remote API"
